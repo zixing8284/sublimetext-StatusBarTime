@@ -45,6 +45,7 @@ class Timer():
 
     def displayTime(self, view, delay, onlyinview, lefty):
         if lefty:
+            # just add "__" in front --> it sticks left
             self.status_key = "__statusclock"
         view.set_status(self.status_key, datetime.now().strftime(self._format))
         actwin = sublime.active_window()
